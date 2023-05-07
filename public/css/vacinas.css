@@ -1,0 +1,526 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    float: left;
+    position: fixed;
+    background-color: lightgray;
+    width: 8%;
+    height: 100vh;
+    margin-right: 100px;
+}
+
+.menu-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: aliceblue;
+    width: 65%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 7%;
+    border: solid black 1px;
+    border-radius: 10%;
+}
+
+.menu-icons:hover{
+    cursor: pointer;
+    background: #adadad;
+}
+
+.outside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.menu-icons img{
+    height: 7vh;
+    margin-bottom: 8%;
+}
+
+.menu-icons p{
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+}
+
+.active{
+    display: none;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    width: 0; 
+    height: 0; 
+    padding-right: 1%;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3vh solid #000000;
+}
+
+.cor-interna{ 
+    width: 0; 
+    height: 0; 
+    margin-right: 0.25vh;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3vh solid rgb(167, 167, 167);
+}
+
+main{
+    width: 100%;
+    margin-left: 8%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-bottom: solid 0.5vh gray;
+}
+
+header h1{
+    font-family: 'Roboto';
+    font-size: 4.5vh;
+}
+
+header > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    height: 8vh;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    width: 5.6vh;
+    height: 6vh;
+}
+
+#divNotificacao{
+    margin-right: 5%;
+}
+
+#notificacao{
+    width: 89.5%;
+    height: 5.4vh;
+}
+
+#fotoPerfil{
+    width: 100%;
+    height: 6vh;
+}
+
+#notificacao:hover{
+    cursor: pointer;
+}
+
+#fotoPerfil:hover{
+    cursor: pointer;
+}
+
+section{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.tituloTabela{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 1.5%;
+}
+
+.tamanhoElementoTitulo{
+    display: flex;
+    align-items: center;
+    height: 6.5vh;
+}
+
+.tituloTabela h1{
+    font-family: 'Roboto';
+    margin-left: 1.5%;
+    font-size: 3.6vh;
+}
+
+.lateralEsquerdo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+.divFotoPet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid black 0.3vh;
+    border-radius: 50%;
+    shape-outside: circle();
+    clip-path: circle();
+    width: 5vh;
+    padding: 0.1%;
+    height: 5vh;
+}
+
+.fotoPet{
+    width: 80%;
+    height: 4.7vh;
+}
+
+.adicionar{
+    height: 4.2vh;
+}
+
+.adicionar:hover{
+    cursor: pointer;
+}
+
+.tabela{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gray;
+    border-radius: 2vh;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.tabela h3{
+    font-family: 'Roboto';
+    font-size: 2.6vh;
+    padding-bottom: 3%;
+}
+
+.tabela p{
+    text-align: center;
+    font-family: 'Roboto';
+    padding: 2%;
+    font-size: 2.2vh;
+}
+
+.dataTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.nomeTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.nomeTabela h3{
+    padding-bottom: 1.5%;
+}
+
+.nomeTabela p{
+    font-family: 'Roboto';
+    padding: 1%;
+}
+
+.doseTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.repetirTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+#first{
+    margin-right: 4%;
+}
+
+.tituloBorda{
+    height: 1.5px;
+    width: 100%;
+    background-color: black;
+}
+
+.borda{
+    height: 0.2vh;
+    width: 100%;
+    background-color: black;
+}
+
+.tamanhoElemento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6vh;
+}
+
+@media only screen and (max-height: 1392px) {
+    .tituloTabela{
+        margin-bottom: 2%;
+    }
+}
+
+@media only screen and (max-width: 1392px) {
+    aside{
+        width: 10%;
+    }
+    main{
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1043px) {
+    aside{
+        width: 12%;
+    }
+    main{
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 846px) {
+    aside{
+        width: 14%;
+    }
+    main{
+        margin-left: 14%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #content{
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside{
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        height: 13.5vh;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    .outside{
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons{
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img{
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p{
+        display: none;
+    }
+
+    .active{
+        display: none;
+    }
+
+    main{
+        height: 105vh;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+
+    .tituloTabela{
+        margin-top: 6%;
+    }
+
+    .adicionar {
+        height: 3.7vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 556px) {
+    aside{
+        height: 12vh;
+    }
+    
+    .tabela p{
+        word-break: break-word;
+    }
+    
+    .tabela h3{
+        font-size: 2.5vh;
+    }
+    
+    .doseTabela{
+        width: 17%;
+    }
+    
+    .repetirTabela{
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .menu-icons img{
+        height: 6vh;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .outside{
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons{
+        width: 80%;
+        margin-left: 0;
+    }
+
+    main{
+        height: 102vh;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+    
+    #notificacao{
+        width: 89.5%;
+        height: 6.4vh;
+    }
+    
+    #fotoPerfil{
+        width: 100%;
+        height: 7vh;
+    }
+
+    .dataTabela .bordaTitulo {
+        margin-left: 10%;
+    }
+
+    .dataTabela .borda {
+        margin-left: 10%;
+    }
+
+    .repetirTabela .bordaTitulo {
+        margin-right: 10%;
+    }
+
+    .repetirTabela .borda {
+        margin-right: 10%;
+    }
+
+    #first{
+        display: block;
+    }
+    
+    #second{
+        display: block;
+    }
+    
+    #tamanhoRepetirTitulo{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    main{
+        height: 100vh;
+    }
+
+    header h1{
+        font-family: 'Roboto';
+        font-size: 3.8vh;
+    }
+
+    #lateral-icons{
+        width: 24%;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+    
+    #divNotificacao{
+        margin-right: 5%;
+    }
+    
+    #notificacao{
+        width: 89.5%;
+        height: 6.4vh;
+    }
+    
+    #fotoPerfil{
+        width: 100%;
+        height: 7vh;
+    }
+
+    .tituloTabela h1{
+        font-family: 'Roboto';
+        margin-left: 1.5%;
+        font-size: 3vh;
+    }
+
+    .tabela h3{
+        font-family: 'Roboto';
+        font-size: 2.3vh;
+        padding-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #lateral-icons{
+        width: 26%;
+    }
+}
