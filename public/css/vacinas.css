@@ -1,8 +1,12 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
-*{
+* {
     margin: 0;
     padding: 0;
+}
+
+body{
+    background-color: #ffffff;
 }
 
 #content{
@@ -10,23 +14,44 @@
     flex-direction: row;
 }
 
-aside{
+aside {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     float: left;
     position: fixed;
-    background-color: lightgray;
+    background-color: #1E8661;
     width: 8%;
     height: 100vh;
     margin-right: 100px;
 }
 
-.menu-icons{
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 100%;
+    height: 6vh;
+    margin-top: 2%;
+}
+
+#logo img{
+    filter: invert();
+    height: 6vh;
+}
+
+#icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.menu-icons {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: aliceblue;
+    background: #53e3a79b;
     width: 65%;
     padding-top: 4%;
     padding-bottom: 4%;
@@ -35,42 +60,47 @@ aside{
     margin-left: 7%;
     border: solid black 1px;
     border-radius: 10%;
+    transition: background-color 0.3s ease;
 }
 
-.menu-icons:hover{
+.menu-icons:hover {
     cursor: pointer;
-    background: #adadad;
+    background: #74e8b7;
 }
 
-.outside{
+.outside {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 2%;
 }
 
-.menu-icons img{
+.menu-icons img {
     height: 7vh;
     margin-bottom: 8%;
 }
 
-.menu-icons p{
+.menu-icons p {
     font-family: 'Roboto';
     font-weight: bold;
     text-align: center;
 }
 
-.active{
+.active {
     display: none;
     align-items: center;
     justify-content: end;
     position: relative;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     padding-right: 1%;
     border-top: 2vh solid transparent;
     border-bottom: 2vh solid transparent;
     border-left: 3vh solid #000000;
+}
+
+#activeVacina{
+    display: flex;
 }
 
 .cor-interna{ 
@@ -79,15 +109,15 @@ aside{
     margin-right: 0.25vh;
     border-top: 2vh solid transparent;
     border-bottom: 2vh solid transparent;
-    border-left: 3vh solid rgb(167, 167, 167);
+    border-left: 3vh solid #74e8b7;
 }
 
-main{
+main {
     width: 100%;
     margin-left: 8%;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -95,15 +125,15 @@ header{
     height: 8vh;
     margin-left: 2%;
     margin-right: 2%;
-    border-bottom: solid 0.5vh gray;
+    border-bottom: solid 0.5vh #008651;
 }
 
-header h1{
+header h1 {
     font-family: 'Roboto';
     font-size: 4.5vh;
 }
 
-header > div{
+header>div {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -112,42 +142,42 @@ header > div{
     height: 8vh;
 }
 
-.icons{
+.icons {
     display: flex;
     align-items: center;
     width: 5.6vh;
     height: 6vh;
 }
 
-#divNotificacao{
+#divNotificacao {
     margin-right: 5%;
 }
 
-#notificacao{
+#notificacao {
     width: 89.5%;
     height: 5.4vh;
 }
 
-#fotoPerfil{
+#fotoPerfil {
     width: 100%;
     height: 6vh;
 }
 
-#notificacao:hover{
+#notificacao:hover {
     cursor: pointer;
 }
 
-#fotoPerfil:hover{
+#fotoPerfil:hover {
     cursor: pointer;
 }
 
-section{
+section {
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
 }
 
-.tituloTabela{
+.tituloTabela {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -156,30 +186,30 @@ section{
     margin-bottom: 1.5%;
 }
 
-.tamanhoElementoTitulo{
+.tamanhoElementoTitulo {
     display: flex;
     align-items: center;
     height: 6.5vh;
 }
 
-.tituloTabela h1{
+.tituloTabela h1 {
     font-family: 'Roboto';
     margin-left: 1.5%;
     font-size: 3.6vh;
 }
 
-.lateralEsquerdo{
+.lateralEsquerdo {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 50%;
 }
 
-.divFotoPet{
+.divFotoPet {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid black 0.3vh;
+    border: solid rgb(0, 0, 0) 0.3vh;
     border-radius: 50%;
     shape-outside: circle();
     clip-path: circle();
@@ -188,24 +218,24 @@ section{
     height: 5vh;
 }
 
-.fotoPet{
+.fotoPet {
     width: 80%;
     height: 4.7vh;
 }
 
-.adicionar{
+.adicionar {
     height: 4.2vh;
 }
 
-.adicionar:hover{
+.adicionar:hover {
     cursor: pointer;
 }
 
-.tabela{
+.tabela {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: gray;
+    background-color: #b1f2c5;
     border-radius: 2vh;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
@@ -213,73 +243,73 @@ section{
     padding-right: 2%;
 }
 
-.tabela h3{
+.tabela h3 {
     font-family: 'Roboto';
     font-size: 2.6vh;
     padding-bottom: 3%;
 }
 
-.tabela p{
+.tabela p {
     text-align: center;
     font-family: 'Roboto';
     padding: 2%;
     font-size: 2.2vh;
 }
 
-.dataTabela{
+.dataTabela {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 20%;
 }
 
-.nomeTabela{
+.nomeTabela {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
 }
 
-.nomeTabela h3{
+.nomeTabela h3 {
     padding-bottom: 1.5%;
 }
 
-.nomeTabela p{
+.nomeTabela p {
     font-family: 'Roboto';
     padding: 1%;
 }
 
-.doseTabela{
+.doseTabela {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 20%;
 }
 
-.repetirTabela{
+.repetirTabela {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 20%;
 }
 
-#first{
+#first {
     margin-right: 4%;
 }
 
-.tituloBorda{
+.tituloBorda {
     height: 1.5px;
     width: 100%;
     background-color: black;
 }
 
-.borda{
+.borda {
     height: 0.2vh;
     width: 100%;
     background-color: black;
 }
 
-.tamanhoElemento{
+.tamanhoElemento {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,88 +317,250 @@ section{
     height: 6vh;
 }
 
-@media only screen and (max-height: 1392px) {
-    .tituloTabela{
+@media only screen and (min-width: 1955px)  and (min-height: 825px) {
+    aside{
+        width: 10% !important;
+    }
+    
+    main{
+        margin-left: 10% !important;
+    }
+
+    .menu-icons{
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-width: 1486px) and (max-width: 1955px) and (min-height: 825px)  {
+    aside{
+        width: 12% !important;
+    }
+
+    main{
+        margin-left: 12% !important;
+    }
+
+    .menu-icons{
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-height: 825px)  and (max-width: 1486px) and (min-height: 825px) {
+    aside{
+        width: 15% !important;
+    }
+
+    .menu-icons {
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 1.8vh;
+    }
+
+    main{
+        margin-left: 15% !important;
+    }
+
+    .tituloTabela {
         margin-bottom: 2%;
     }
 }
 
-@media only screen and (max-width: 1392px) {
-    aside{
-        width: 10%;
-    }
-    main{
-        margin-left: 10%;
-    }
-}
-
-@media only screen and (max-width: 1043px) {
-    aside{
+@media only screen and (max-width: 1478px) and (min-height: 825px) {
+    aside {
         width: 12%;
     }
-    main{
+
+    main {
         margin-left: 12%;
     }
 }
 
-@media only screen and (max-width: 846px) {
-    aside{
-        width: 14%;
+@media only screen and (max-width: 1392px) {
+    aside {
+        width: 10%;
     }
-    main{
-        margin-left: 14%;
+
+    main {
+        margin-left: 10%;
     }
 }
 
-@media only screen and (max-width: 760px) {
-    #content{
+@media only screen and (min-height: 825px) and (max-width: 1241px) {
+    #logo {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1110px) {
+    #content {
         flex-direction: column-reverse;
         align-items: top;
         justify-content: space-between;
     }
 
-    aside{
+    aside {
         flex-direction: row;
         position: sticky;
         bottom: 0;
-        width: 100%;
-        height: 13.5vh;
+        width: 100% !important;
+        height: 10vh;
     }
 
-    #logo{
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
         display: none;
     }
 
-    .outside{
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
         justify-content: space-evenly;
         width: 20%;
         margin: 0;
     }
 
-    .menu-icons{
+    .menu-icons {
+        height: 7vh;
         width: 70%;
         margin-left: 0;
     }
 
     .menu-icons img{
+        height: 6vh;
         margin-bottom: 6%;
     }
 
-    .menu-icons p{
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
         display: none;
     }
 
-    .active{
+    #activeVacina{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1043px) {
+    aside {
+        width: 12%;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1010px) {
+    #first {
+        display: block;
+    }
+
+    #second {
+        display: block;
+    }
+
+    #tamanhoRepetirTitulo {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 846px) {
+    aside {
+        width: 14%;
+    }
+
+    main {
+        margin-left: 14%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 760px) {
+    aside {
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 10vh !important;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #content {
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside {
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 13.5vh;
+    }
+
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
         display: none;
     }
 
-    main{
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
+        display: none;
+    }
+
+    #activeVacina{
+        display: none;
+    }
+
+    main {
         height: 105vh;
         margin-top: 2%;
         margin-left: 0;
     }
 
-    .tituloTabela{
+    .tituloTabela {
         margin-top: 6%;
     }
 
@@ -377,67 +569,81 @@ section{
     }
 }
 
-@media only screen and (max-width: 600px) {
-
-}
+@media only screen and (max-width: 600px) {}
 
 @media only screen and (max-width: 556px) {
-    aside{
+    aside {
         height: 12vh;
     }
-    
-    .tabela p{
+
+    .tabela p {
         word-break: break-word;
     }
-    
-    .tabela h3{
+
+    .tabela h3 {
         font-size: 2.5vh;
     }
-    
-    .doseTabela{
+
+    .doseTabela {
         width: 17%;
     }
-    
-    .repetirTabela{
+
+    .repetirTabela {
         width: 23%;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .menu-icons img{
+    .menu-icons img {
         height: 6vh;
+    }
+
+    .tituloTabela {
+        margin-bottom: 3%;
+    }
+
+    #first {
+        display: block;
+    }
+
+    #second {
+        display: block;
+    }
+
+    #tamanhoRepetirTitulo {
+        flex-direction: column;
     }
 }
 
 @media only screen and (max-width: 380px) {
-    .outside{
+    .outside {
         justify-content: space-evenly;
         width: 20%;
         margin: 0;
     }
 
-    .menu-icons{
+    .menu-icons {
         width: 80%;
         margin-left: 0;
     }
 
-    main{
+    main {
         height: 102vh;
     }
 
-    .icons{
+    .icons {
         display: flex;
         align-items: center;
         width: 7vh;
         height: 7vh;
     }
-    
-    #notificacao{
+
+    #notificacao {
         width: 89.5%;
         height: 6.4vh;
     }
-    
-    #fotoPerfil{
+
+    #fotoPerfil {
         width: 100%;
         height: 7vh;
     }
@@ -457,62 +663,50 @@ section{
     .repetirTabela .borda {
         margin-right: 10%;
     }
-
-    #first{
-        display: block;
-    }
-    
-    #second{
-        display: block;
-    }
-    
-    #tamanhoRepetirTitulo{
-        flex-direction: column;
-    }
 }
 
 @media only screen and (max-width: 350px) {
-    main{
+    main {
         height: 100vh;
     }
 
-    header h1{
+    header h1 {
         font-family: 'Roboto';
         font-size: 3.8vh;
     }
 
-    #lateral-icons{
+    #lateral-icons {
         width: 24%;
     }
 
-    .icons{
+    .icons {
         display: flex;
         align-items: center;
         width: 7vh;
         height: 7vh;
     }
-    
-    #divNotificacao{
+
+    #divNotificacao {
         margin-right: 5%;
     }
-    
-    #notificacao{
+
+    #notificacao {
         width: 89.5%;
         height: 6.4vh;
     }
-    
-    #fotoPerfil{
+
+    #fotoPerfil {
         width: 100%;
         height: 7vh;
     }
 
-    .tituloTabela h1{
+    .tituloTabela h1 {
         font-family: 'Roboto';
         margin-left: 1.5%;
         font-size: 3vh;
     }
 
-    .tabela h3{
+    .tabela h3 {
         font-family: 'Roboto';
         font-size: 2.3vh;
         padding-bottom: 3%;
@@ -520,7 +714,7 @@ section{
 }
 
 @media only screen and (max-width: 320px) {
-    #lateral-icons{
+    #lateral-icons {
         width: 26%;
     }
 }

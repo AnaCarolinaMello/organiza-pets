@@ -1,9 +1,10 @@
-{
+let dados = {
     "newId": 2,
     "user":[
         {
             "id": 1,
             "nome": "userName",
+            "newPetId": 2,
             "pets":[
                 {
                     "id": 1,
@@ -37,35 +38,36 @@
                             "repetir": "20/10/2023"
                         }
                     ],
-                    "tarefaNewId": 1,
+                    "tarefaNewId": 6,
+                    "cor": '#8568fc',
                     "tarefas": [
                     {
                         "id":1,
                         "nomeTarefa":"Passear",
-                        "descricao":"Sair para passear",
-                        "inicio": "05/08/2023-10:00",
-                        "fim":""
+                        "descricao":"Sair para passear com a Bel",
+                        "inicio": "05/11/2023-15:00",
+                        "fim":"05/11/2023-16:00"
                     },
                     {
                         "id":2,
-                        "nomeTarefa":"Banho da Bel",
+                        "nomeTarefa":"Petshop",
                         "descricao":"Levar a Bel para tomar banho",
-                        "inicio": "05/08/2023-09:00",
-                        "fim":"05/08/2023-12:00"
+                        "inicio": "05/07/2023-09:00",
+                        "fim":"05/07/2023-11:00"
                     },
                     {
                         "id":3,
                         "nomeTarefa":"Remédio",
                         "descricao":"Dar remédio para a Bel",
-                        "inicio": "05/09/2023-14:00",
+                        "inicio": "05/13/2023-14:00",
                         "fim":""
                     },
                     {
                         "id":4,
-                        "nomeTarefa":"Marcar vet da bel",
+                        "nomeTarefa":"Marcar vet",
                         "descricao":"Marcar veterinário",
-                        "inicio": "05/07/2023-10:00",
-                        "fim":"05/07/2023-10:30"
+                        "inicio": "05/10/2023-19:00",
+                        "fim":"05/10/2023-19:30"
                     },
                     {
                         "id":5,
@@ -76,9 +78,9 @@
                     },
                     {
                         "id":6,
-                        "nomeTarefa":"Marcar vet teste",
-                        "descricao":"Marcar veterinário",
-                        "inicio": "05/12/2023-22:00",
+                        "nomeTarefa":"Tapete",
+                        "descricao":"Comprar tapete higienico",
+                        "inicio": "05/16/2023-22:00",
                         "fim":"05/12/2023-22:30"
                     }
                 ]
@@ -136,40 +138,41 @@
                             "repetir": ""
                         }
                     ],
-                    "tarefaNewId": 1,
+                    "tarefaNewId": 5,
+                    "cor": '#03b66bc5',
                     "tarefas": [{
                         "id":1,
-                        "nomeTarefa":"Levar para o pet",
-                        "descricao":"Levar a galla para o petshop",
-                        "inicio": "05/10/2023-19:00",
-                        "fim":"05/10/2023-20:00"
+                        "nomeTarefa":"Remédio",
+                        "descricao":"Dar o remédio para a Galla",
+                        "inicio": "05/08/2023-08:00",
+                        "fim":""
                     },
                     {
                         "id":2,
                         "nomeTarefa":"Remédio",
-                        "descricao":"Dar remédio para a Gala",
-                        "inicio": "05/09/2023-18:00",
+                        "descricao":"Dar o remédio para a Gala",
+                        "inicio": "05/08/2023-20:00",
                         "fim":""
                     },
                     {
                         "id":3,
-                        "nomeTarefa":"Banho da Galla",
-                        "descricao":"Levar a galla para tomar banho",
-                        "inicio": "05/11/2023-11:00",
-                        "fim":"05/11/2023-12:00"
+                        "nomeTarefa":"Veterinário",
+                        "descricao":"Levar a Galla para o veterinário",
+                        "inicio": "05/09/2023-11:00",
+                        "fim":"05/09/2023-12:00"
                     },
                     {
                         "id":4,
-                        "nomeTarefa":"Marcar vet galla",
-                        "descricao":"Marcar veterinário",
-                        "inicio": "05/12/2023-09:00",
+                        "nomeTarefa":"Comprar ração",
+                        "descricao":"Comprar ração para a Galla",
+                        "inicio": "05/10/2023-18:00",
                         "fim":""
                     },
                     {
                         "id":5,
-                        "nomeTarefa":"Remédio",
-                        "descricao":"Dar remédio pra Galla",
-                        "inicio": "05/13/2023-09:00",
+                        "nomeTarefa":"Areia",
+                        "descricao":"Comprar areia para a galla",
+                        "inicio": "05/12/2023-09:00",
                         "fim":""
                     }
                 ]
@@ -177,4 +180,9 @@
             ]
         }
     ]
+}                            
+
+dados = JSON.stringify(dados)
+if(!(localStorage.getItem('database'))){
+    localStorage.setItem('database', dados);
 }

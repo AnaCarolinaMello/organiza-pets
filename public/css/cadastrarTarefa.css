@@ -1,0 +1,235 @@
+html, body{   
+    margin: 0;
+    border: none;
+    padding: 0;
+    position:fixed;
+    right: 0;
+    left: 0;
+    top: 0; 
+    bottom: 0;
+}
+
+#tarefa-entry{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#tarefa-esquerda{
+    width: 50%;
+    height: 100vh;
+    background-color: #3c3c3c;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#voltar{
+    border: none;
+    margin: 0;
+    align-items: center;
+    justify-content: left;
+    border-bottom: 3px solid white;
+}
+#buton{
+    height: 7vh;
+    border-radius: 0;
+    border: none;
+    font-weight: bolder;
+    font-family: Helvetica;
+    font-size:medium;
+    background-color: #3c3c3c;
+    color: white;
+}
+#tarefa-direita{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(rgba(7, 110, 45, 0.515), rgba(7, 110, 45, 0.515)), url('../img/bannerLogin.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    background-size:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+#text-p1{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto',sans-serif;
+    font-size: 38px;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    color: #33dba3;
+}
+#text-p2{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    font-size: 38px;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+.linha-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#linha-1{
+    width: 90px;
+    height: 2px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #33dba3;
+}
+#linha-2{
+    width: 200px;
+    height: 4px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+#text-p-2{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    color: white;
+}
+#direita-bottom{
+    height: 20vh;
+}
+#inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 15px;
+    gap: 10px;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
+.input-size1{
+    width: 100%;
+    height: 5vh;
+    font-size: 22px;
+    font-family:'Roboto',sans-serif;
+    background-color: #686868;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    border-style: none;
+    border: #686868 solid 2px;
+    border-radius: 3px;
+    padding: 4% 2% 2% 2%;
+    margin-bottom: 3%;
+}
+.input-size1:hover{
+    outline: 0;
+}
+.input-size1:focus{
+    border: #33dba3 solid 3px;
+    outline: 0;
+    box-shadow: none;
+}
+#input-size2{
+    height: 15vh;
+    padding: 21px 12px 10px;
+}
+#button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cadastrar-button{
+    background-color: #33dba3;
+    border: none;
+    border-radius: 4px;
+    height: 7vh;
+    width: 20%;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+}
+.date-inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.date-placeholder{
+    color: white;
+    font-size: x-large;
+    margin: 0;
+}
+.date-inputs input{
+    width: 50%;
+}
+.form-floating{
+    width: 100%;
+}
+
+::placeholder{
+    color:white;
+}
+
+@media only screen and (max-width: 932px) {
+    #tarefa-esquerda{
+        width: 100%;
+    }
+    #inputs{
+        gap: 5px;
+        padding: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    #tarefa-direita{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #inputs{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    #inputs{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #cadastrar-button{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .date-placeholder{
+        font-size: larger;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .date-placeholder{
+        font-size: medium;
+    }
+    #cadastrar-button{
+        width: 60%;
+    }
+}

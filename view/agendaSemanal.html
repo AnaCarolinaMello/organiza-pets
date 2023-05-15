@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/vacinas.css">
-    <title>Organiza Pets</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/agendaSemanal.css">
     <link rel="icon" href="../public/img/logo.svg">
 </head>
+
 <body>
     <div id="content">
         <aside>
@@ -20,7 +22,7 @@
                         <img src="../public/img/perfil.svg" alt="perfil">
                         <p>Perfil</p>
                     </div>
-                    <div class="active" id="activePerfil">
+                    <div class="active">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -29,7 +31,7 @@
                         <img src="../public/img/vacina.svg" alt="Vacina">
                         <p>Vacina</p>
                     </div>
-                    <div class="active" id="activeVacina">
+                    <div class="active">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -38,7 +40,7 @@
                         <img src="../public/img/calendario.svg" alt="canlendario">
                         <p>Calendar</p>
                     </div>
-                    <div class="active" id="activeCalendar">
+                    <div class="active">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -47,7 +49,7 @@
                         <img src="../public/img/comida.svg" alt="comida">
                         <p>Comida</p>
                     </div>
-                    <div class="active"  id="activeComida">
+                    <div class="active">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -56,7 +58,7 @@
                         <img src="../public/img/rotina.svg" alt="rotina">
                         <p>Rotina</p>
                     </div>
-                    <div class="active"  id="activeRotina">
+                    <div class="active">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -64,7 +66,7 @@
         </aside>
         <main>
             <header>
-                <h1>Vacinas</h1>
+                <h1>Tarefas</h1>
                 <div id="lateral-icons">
                     <div class="icons" id="divNotificacao">
                         <span id="haveNotification"></span>
@@ -75,12 +77,48 @@
                     </div>
                 </div>
             </header>
-            <section id="vacinas">
-        
-            </section>
-        </main>
+            <section id="tarefas">
+                <div id="divAdd">
+                    <img src="../public/img/adicionar.svg" alt="adicionar" class="adicionar" id="adicionar">
+                </div>
+                <div id="semana">
+                    <div id="domingo" class="coluna">
+                        <h3 class="days">DOMINGO</h3>
+                        <div class="dias" id="day0"></div>
+                    </div>
+                    <div id="segunda" class="coluna">
+                        <h3 class="days">SEGUNDA</h3>
+                        <div id="day1"></div>
+                    </div>
+
+                    <div id="terca" class="coluna">
+                        <h3 class="days">TERÇA</h3>
+                        <div id="day2"></div>
+                    </div>
+                    <div id="quarta" class="coluna">
+                        <h3 class="days">QUARTA</h3>
+                        <div id="day3"></div>
+                    </div>
+                    <div id="quinta" class="coluna">
+                        <h3 class="days">QUINTA</h3>
+                        <div id="day4"></div>
+                    </div>
+                    <div id="sexta" class="coluna">
+                        <h3 class="days">SEXTA</h3>
+                        <div id="day5"></div>
+                    </div>
+                    <div id="sabado">
+                        <h3 class="days">SABADO</h3>
+                        <div id="day6"></div>
+                    </div>
+                </div>
+
+    </div>
+    </section>
+    </main>
     </div>
     <script src="../controller/databaseController.js"></script>
-    <script src="../public/js/vacinas.js"></script>
+    <script src="../public/js/agendaSemanal.js"></script>
 </body>
+
 </html>

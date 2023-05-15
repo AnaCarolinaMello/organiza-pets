@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/cadastrarAnimais1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="../public/img/logo.svg">
+</head>
+
+<body>
+    <main>
+        <div id="banner">
+            <h1 id="titleBanner">Seja bem vindo, mais novo integrante da família</h1>
+            <div id="line"></div>
+            <!-- <p id="textoPrincipal">Bem vindo ao mais novo integrante da família</p> -->
+            <p id="textoSecundario">Estamos muito felizes em recebê-lo(a)!</p>
+        </div>
+        <div id="flexbox">
+            <div id="loginArea">
+                <div id="progressBar">
+                    <div id="voltar">
+                        <h3>Voltar</h3>
+                    </div>
+                    <div id="lineOfProgress"></div>
+                </div>
+                <h1 id="loginTitle">Cadastro</h1>
+                <div id="lineGreen"></div>
+                <div id="divInput">
+                    <form method="post">
+                        <div class="choices" id="dog">
+                            <label class="typeLossText">Cachorro</label>
+                            <img class='typeLossImg' src="../public/img/dog.svg">
+                        </div>
+                        <div class="choices" id="cat">
+                            <label class="typeLossText">Gato</label>
+                            <img class="typeLossImg" src="../public/img/cat.svg" alt="">
+                        </div>
+                        <div class="choices" id="outro">
+                            <label class="typeLossText">Outros</label>
+                            <img class="typeLossImg" src="../public/img/paw.svg" alt="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../controller/databaseController.js"></script>
+    <script src="../public/js/cadastroAnimain.js"></script>
+</body>
+
+</html>
