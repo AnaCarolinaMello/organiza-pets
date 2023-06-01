@@ -1,8 +1,35 @@
+setTimeout(()=>{
+    let loader = document.querySelector('#divLoader');
+    let content = document.querySelector('section');
+    let header = document.querySelector('header');
+    let aside = document.querySelector('aside');
+    loader.style.display = 'none'
+    content.style.display = 'flex'
+    header.style.display = 'flex'
+    aside.style.display = 'flex'
+}, 1800);
 
 const menu_icon = (document.querySelector('#vacina')).querySelector('.menu-icons')
 menu_icon.style.background = '#74e8b7'
 const database = JSON.parse(localStorage.getItem('database'))
 getVacinas(database)
+
+const perfil = document.querySelector("#perfil .menu-icons")
+perfil.addEventListener('click', ()=>{
+    window.location.assign(`../view/perfil.html`)
+})
+const rotina = document.querySelector("#rotina .menu-icons")
+rotina.addEventListener('click', ()=>{
+    window.location.assign(`../view/agendaSemanal.html`)
+})
+const calendario = document.querySelector("#calendario .menu-icons")
+calendario.addEventListener('click', ()=>{
+    window.location.assign(`../view/calendario.html`)
+})
+const comida = document.querySelector("#comida .menu-icons")
+comida.addEventListener('click', ()=>{
+    window.location.assign(`../view/comida.html`)
+})
 
 function getVacinas(db) {
   const divVacinas = document.querySelector("#vacinas");

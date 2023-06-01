@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rotina</title>
     <link rel="stylesheet" href="../public/css/agendaSemanal.css">
     <link rel="icon" href="../public/img/logo.svg">
 </head>
@@ -17,7 +17,7 @@
                 <img src="../public/img/logo.svg">
             </div>
             <div id="icons">
-                <div id="menu" class="outside">
+                <div id="perfil" class="outside">
                     <div class="menu-icons">
                         <img src="../public/img/perfil.svg" alt="perfil">
                         <p>Perfil</p>
@@ -35,9 +35,9 @@
                         <div class="cor-interna"></div>
                     </div>
                 </div>
-                <div id="canlendario" class="outside">
+                <div id="calendario" class="outside">
                     <div class="menu-icons">
-                        <img src="../public/img/calendario.svg" alt="canlendario">
+                        <img src="../public/img/calendario.svg" alt="calendario">
                         <p>Calendar</p>
                     </div>
                     <div class="active">
@@ -65,6 +65,9 @@
             </div>
         </aside>
         <main>
+            <div id="divLoader">
+                <div class="loader"></div>
+            </div>
             <header>
                 <h1>Tarefas</h1>
                 <div id="lateral-icons">
@@ -79,7 +82,9 @@
             </header>
             <section id="tarefas">
                 <div id="divAdd">
-                    <img src="../public/img/adicionar.svg" alt="adicionar" class="adicionar" id="adicionar">
+                    <h3 id="atualSemana"></h3>
+                    <img src="../public/img/adicionar.svg" alt="adicionar" class="adicionar" id="adicionar"
+                        onclick="addClicks()">
                 </div>
                 <div id="semana">
                     <div id="domingo" class="coluna">

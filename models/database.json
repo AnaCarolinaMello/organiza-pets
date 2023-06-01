@@ -4,6 +4,7 @@
         {
             "id": 1,
             "nome": "userName",
+            "newPetId": 2,
             "pets":[
                 {
                     "id": 1,

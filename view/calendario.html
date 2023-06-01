@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/css/calendario.css">
+    <link rel="stylesheet" href="../public/css/aside.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    
+    
+</head>
+<body>
+
+    <aside>
+        <div id="logo">
+            <img src="../public/img/logo.svg">
+        </div>
+        <div id="icons">
+            <div id="menu" class="outside">
+                <div class="menu-icons">
+                    <img src="../public/img/perfil.svg" alt="perfil">
+                    <p>Perfil</p>
+                </div>
+                <div class="active">
+                    <div class="cor-interna"></div>
+                </div>
+            </div>
+            <div id="vacina" class="outside">
+                <div class="menu-icons">
+                    <img src="../public/img/vacina.svg" alt="Vacina">
+                    <p>Vacina</p>
+                </div>
+                <div class="active">
+                    <div class="cor-interna"></div>
+                </div>
+            </div>
+            <div id="calendario" class="outside">
+                <div class="menu-icons">
+                    <img src="../public/img/calendario.svg" alt="calendario">
+                    <p>Calendar</p>
+                </div>
+                <div class="active">
+                    <div class="cor-interna"></div>
+                </div>
+            </div>
+            <div id="comida" class="outside">
+                <div class="menu-icons">
+                    <img src="../public/img/comida.svg" alt="comida">
+                    <p>Comida</p>
+                </div>
+                <div class="active">
+                    <div class="cor-interna"></div>
+                </div>
+            </div>
+            <div id="rotina" class="outside">
+                <div class="menu-icons">
+                    <img src="../public/img/rotina.svg" alt="rotina">
+                    <p>Rotina</p>
+                </div>
+                <div class="active">
+                    <div class="cor-interna"></div>
+                </div>
+            </div>
+        </div>
+    </aside>        
+
+    <main>
+        <div id="containerCalendario "class="relative">
+            <div id='calendar' class="relative p-10"></div>
+        </div>
+    </main>
+
+    <script src="../public/js/calendario.js"></script>
+    <script>
+
+        const events = getTarefasSemanais(database)
+        console.log("events",events);
+        document.addEventListener('DOMContentLoaded', function() {
+          let  calendarEl = document.getElementById('calendar');
+          let calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            editable:true,
+            events: events
+          });
+          calendar.render();
+        });
+  
+      </script>
+</body>
+</html>

@@ -1,6 +1,12 @@
 let database = JSON.parse(localStorage.getItem("database"))
 
 if((window.location.href).includes('/view/cadastrarAnimais1.html')){
+    setTimeout(()=>{
+        let loader = document.querySelector('#divLoader');
+        let content = document.querySelector('main');
+        loader.style.display = 'none'
+        content.style.display = 'flex'
+      }, 1800);
     const dog = document.querySelector("#dog")
     const cat = document.querySelector("#cat")
     const outro = document.querySelector("#outro")
@@ -17,16 +23,23 @@ if((window.location.href).includes('/view/cadastrarAnimais1.html')){
 }
 
 if((window.location.href).includes('/view/cadastrarAnimais2.html')){
+    const cadastrar = document.querySelector("#cadastrar")
     cadastrar.addEventListener("click", ()=>{
         const url = new URL(window.location.href);
-        const tipo = url.searchParams.get('tipo');;
+        const tipo = url.searchParams.get('tipo');
         const path = url.searchParams.get('path');
         const nomAnimal = document.querySelector(".nomAnimal")
         const idadeAnimal = document.querySelector(".idadeAnimal")
         const pesoAnimal = document.querySelector(".pesoAnimal")
         const racaAnimal = document.querySelector(".racaAnimal")
-        const cadastrar = document.querySelector("#cadastrar")
-        database.user[0].newPetId += 1
+        if(!tipo || !path){
+            alert("Pet cadastrado incorretamente, tente novamente mais tarde")
+            return
+        }else if(!nomAnimal.value || !idadeAnimal.value || !pesoAnimal.value){
+            alert("Digite todos os dados necessários")
+            return
+        }
+        database.user[0].newPetId = 1 + database.user[0].newPetId
         cor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')
         let dados = {
             id: database.user[0].newPetId,
@@ -37,14 +50,16 @@ if((window.location.href).includes('/view/cadastrarAnimais2.html')){
             tipo: tipo,
             path: path,
             cor: cor,
-            newVacinaId: 1,
+            tarefaNewId: 0,
+            tarefas: [],
+            newVacinaId: 0,
             vacinas: []
         }
         database.user[0].pets.push(dados)
         database = JSON.stringify(database)
         localStorage.removeItem("database")
         localStorage.setItem("database", database)
-        window.location.assign(`../view/vacinas.html`)
+        window.location.assign(`../view/perfil.html`)
     })
 }
 

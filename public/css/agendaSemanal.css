@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
 
 
 
@@ -112,17 +112,48 @@ aside {
     border-left: 3vh solid #74e8b7;
 }
 
-#rotina .active {
+#activeRotina {
     display: flex;
 }
 
 main {
     width: 100%;
     margin-left: 8%;
+    height: 100vh;
+}
+
+#divLoader{
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1E8661;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 header {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -176,7 +207,7 @@ header>div {
 }
 
 section {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     margin-left: 2%;
@@ -185,8 +216,10 @@ section {
 }
 
 #divAdd {
+    font-family: "Roboto", sans-serif;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .adicionar {
@@ -278,9 +311,393 @@ section {
 #day4,
 #day5,
 #day6 {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10%;
+}
+
+@media only screen and (min-width: 1955px) and (min-height: 825px) {
+    aside {
+        width: 10% !important;
+    }
+
+    main {
+        margin-left: 10% !important;
+    }
+
+    .menu-icons {
+        height: 12vh;
+    }
+
+    .menu-icons p {
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-width: 1486px) and (max-width: 1955px) and (min-height: 825px) {
+    aside {
+        width: 12% !important;
+    }
+
+    main {
+        margin-left: 12% !important;
+    }
+
+    .menu-icons {
+        height: 12vh;
+    }
+
+    .menu-icons p {
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (max-width: 1478px) and (min-height: 825px) {
+    aside {
+        width: 12%;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 1392px) {
+    aside {
+        width: 10%;
+    }
+
+    main {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1241px) {
+    #logo {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1110px) {
+    #content {
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 10vh;
+    }
+
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        height: 7vh;
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img {
+        height: 6vh;
+        margin-bottom: 6%;
+    }
+
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
+        display: none;
+    }
+
+    #activeRotina {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1043px) {
+    aside {
+        width: 12%;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1010px) {
+    #first {
+        display: block;
+    }
+
+    #second {
+        display: block;
+    }
+
+    #tamanhoRepetirTitulo {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 846px) {
+    aside {
+        width: 14%;
+    }
+
+    main {
+        margin-left: 14%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 760px) {
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 10vh !important;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #content {
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 13.5vh;
+    }
+
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
+        display: none;
+    }
+
+    #activeRotina {
+        display: none;
+    }
+
+    main {
+        height: 105vh;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+
+    .tituloTabela {
+        margin-top: 6%;
+    }
+
+    .adicionar {
+        height: 3.7vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 556px) {
+    aside {
+        height: 12vh;
+    }
+
+    .tabela p {
+        word-break: break-word;
+    }
+
+    .tabela h3 {
+        font-size: 2.5vh;
+    }
+
+    .doseTabela {
+        width: 17%;
+    }
+
+    .repetirTabela {
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .menu-icons img {
+        height: 6vh;
+    }
+
+    .tituloTabela {
+        margin-bottom: 3%;
+    }
+
+    #first {
+        display: block;
+    }
+
+    #second {
+        display: block;
+    }
+
+    #tamanhoRepetirTitulo {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    main {
+        height: 102vh;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #notificacao {
+        width: 89.5%;
+        height: 6.4vh;
+    }
+
+    #fotoPerfil {
+        width: 100%;
+        height: 7vh;
+    }
+
+    .dataTabela .bordaTitulo {
+        margin-left: 10%;
+    }
+
+    .dataTabela .borda {
+        margin-left: 10%;
+    }
+
+    .repetirTabela .bordaTitulo {
+        margin-right: 10%;
+    }
+
+    .repetirTabela .borda {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    main {
+        height: 100vh;
+    }
+
+    header h1 {
+        font-family: 'Roboto';
+        font-size: 3.8vh;
+    }
+
+    #lateral-icons {
+        width: 24%;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #divNotificacao {
+        margin-right: 5%;
+    }
+
+    #notificacao {
+        width: 89.5%;
+        height: 6.4vh;
+    }
+
+    #fotoPerfil {
+        width: 100%;
+        height: 7vh;
+    }
+
+    .tituloTabela h1 {
+        font-family: 'Roboto';
+        margin-left: 1.5%;
+        font-size: 3vh;
+    }
+
+    .tabela h3 {
+        font-family: 'Roboto';
+        font-size: 2.3vh;
+        padding-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #lateral-icons {
+        width: 26%;
+    }
 }

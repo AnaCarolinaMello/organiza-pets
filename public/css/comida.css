@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+    position: fixed;
+    background-color: #1E8661;
+    width: 8%;
+    height: 100vh;
+    margin-right: 100px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 100%;
+    height: 6vh;
+    margin-top: 2%;
+}
+
+#logo img{
+    filter: invert();
+    height: 6vh;
+}
+
+#icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.menu-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #53e3a79b;
+    width: 65%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 7%;
+    border: solid black 1px;
+    border-radius: 10%;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icons:hover {
+    cursor: pointer;
+    background: #74e8b7;
+}
+
+.outside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.menu-icons img {
+    height: 7vh;
+    margin-bottom: 8%;
+}
+
+.menu-icons p {
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+}
+
+.active {
+    display: none;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    width: 0;
+    height: 0;
+    padding-right: 1%;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3vh solid #000000;
+}
+
+#activeComida{
+    display: flex;
+}
+
+.cor-interna{ 
+    width: 0; 
+    height: 0; 
+    margin-right: 0.25vh;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3vh solid #74e8b7;
+}
+
+main {
+    width: 100%;
+    margin-left: 8%;
+}
+
+#divLoader{
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1E8661;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-bottom: solid 0.5vh #008651;
+}
+
+header h1 {
+    font-family: 'Roboto';
+    font-size: 4.5vh;
+}
+
+header>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    height: 8vh;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    width: 5.6vh;
+    height: 6vh;
+}
+
+#divNotificacao {
+    margin-right: 5%;
+}
+
+#notificacao {
+    width: 89.5%;
+    height: 5.4vh;
+}
+
+#fotoPerfil {
+    width: 100%;
+    height: 6vh;
+}
+
+#notificacao:hover {
+    cursor: pointer;
+}
+
+#fotoPerfil:hover {
+    cursor: pointer;
+}
+
+section {
+    display: none;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+@media only screen and (min-width: 1955px)  and (min-height: 825px) {
+    aside{
+        width: 10% !important;
+    }
+    
+    main{
+        margin-left: 10% !important;
+    }
+
+    .menu-icons{
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-width: 1486px) and (max-width: 1955px) and (min-height: 825px)  {
+    aside{
+        width: 12% !important;
+    }
+
+    main{
+        margin-left: 12% !important;
+    }
+
+    .menu-icons{
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 2vh;
+    }
+}
+
+@media only screen and (min-height: 825px)  and (max-width: 1486px) and (min-height: 825px) {
+    aside{
+        width: 15% !important;
+    }
+
+    .menu-icons {
+        height: 12vh;
+    }
+
+    .menu-icons p{
+        font-size: 1.8vh;
+    }
+
+    main{
+        margin-left: 15% !important;
+    }
+}
+
+@media only screen and (max-width: 1478px) and (min-height: 825px) {
+    aside {
+        width: 12%;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 1392px) {
+    aside {
+        width: 10%;
+    }
+
+    main {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1241px) {
+    #logo {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1110px) {
+    #content {
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 10vh;
+    }
+
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        height: 7vh;
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img{
+        height: 6vh;
+        margin-bottom: 6%;
+    }
+
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
+        display: none;
+    }
+
+    #activeComida{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1043px) {
+    aside {
+        width: 12%;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1010px) {
+}
+
+@media only screen and (max-width: 846px) {
+    aside {
+        width: 14%;
+    }
+
+    main {
+        margin-left: 14%;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 760px) {
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 10vh !important;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #content {
+        flex-direction: column-reverse;
+        align-items: top;
+        justify-content: space-between;
+    }
+
+    aside {
+        display: none;
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        width: 100% !important;
+        height: 13.5vh;
+    }
+
+    #icons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    main {
+        margin-left: 0 !important;
+    }
+
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .menu-icons img {
+        margin-bottom: 6%;
+    }
+
+    .menu-icons p {
+        display: none;
+    }
+
+    #activeComida{
+        display: none;
+    }
+
+    main {
+        height: 105vh;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 556px) {
+    aside {
+        height: 12vh;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .menu-icons img {
+        height: 6vh;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .outside {
+        justify-content: space-evenly;
+        width: 20%;
+        margin: 0;
+    }
+
+    .menu-icons {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    main {
+        height: 102vh;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #notificacao {
+        width: 89.5%;
+        height: 6.4vh;
+    }
+
+    #fotoPerfil {
+        width: 100%;
+        height: 7vh;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    main {
+        height: 100vh;
+    }
+
+    header h1 {
+        font-family: 'Roboto';
+        font-size: 3.8vh;
+    }
+
+    #lateral-icons {
+        width: 24%;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #divNotificacao {
+        margin-right: 5%;
+    }
+
+    #notificacao {
+        width: 89.5%;
+        height: 6.4vh;
+    }
+
+    #fotoPerfil {
+        width: 100%;
+        height: 7vh;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #lateral-icons {
+        width: 26%;
+    }
+}

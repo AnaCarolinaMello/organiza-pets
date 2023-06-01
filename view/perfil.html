@@ -1,123 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organiza Pets</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="../public/css/perfil.css">
+    <link rel="icon" href="../public/img/logo.svg">
 </head>
 <body>
-    <aside>
-        <img>
-        <div id="menuPerfil">
-            <img>
-            <p>Perfil</p>
-        </div>
-        <div id="menuVacina">
-            <img>
-            <p>Vacinas</p>
-        </div>
-        <div id="menuCalendario">
-            <img>
-            <p>Calendar</p>
-        </div>
-        <div id="menuComida">
-            <img>
-            <p>Comida</p>
-        </div>
-        <div id="menuRotina">
-            <img>
-            <p>Rotina</p>
-        </div>
-    </aside>
-    <main>
-        <header>
-            <h3>Perfil</h3>
-            <div id="notificaoFoto">
-                <img>
-                <img>
-            </div>
-        </header>
-        <section>
-            <div id="perfil">
-                <div id="fotoPerfil">
-                    <img id="foto">
-                    <img id="editar">
+    <div id="confirmacao">
+        <div id="confirmarDelete">
+            <h1 id="close">x</h1>
+            <div id="confirmContent">
+                <div id="tituloDelete">
+                    <h2>Tem certeza que deseja deletar?</h2>
                 </div>
-                <h3>Nome</h3>
-                <button>Nova Tarefa</button>
-                <div id="grafico">
-                    <canvas id="myChart"></canvas>
+                <div id="botoes">
+                    <button id="cancelar">Cancelar</button>
+                    <button id="deletar">Deletar</button>
                 </div>
             </div>
-            <div id="programacao">
-                <div id="pets">
-                    <h4>Pets</h4>
-                    <div id="petsCard">
-                        <div class="cardPet"></div>
-                        <div class="cardPet"></div>
-                        <div class="cardPet"></div>
+        </div>
+    </div>
+    <div id="content">
+        <aside>
+            <div id="logo">
+                <img src="../public/img/logo.svg">
+            </div>
+            <div id="icons">
+                <div id="perfil" class="outside">
+                    <div class="menu-icons">
+                        <img src="../public/img/perfil.svg" alt="perfil">
+                        <p>Perfil</p>
+                    </div>
+                    <div class="active" id="activePerfil">
+                        <div class="cor-interna"></div>
                     </div>
                 </div>
-                <div id="agenda">
-                    <h4>Agenda</h4>
-                    <div class="demostracaoTarefa">
-                        <div id="agendaHeader">
-                            <h4>Todos</h4>
-                            <h4>A Fazer</h4>
-                            <h4>Lembretes</h4>
-                        </div>
-                        <div class="nomeTarefa">
-                            <div class="data">
-                                <h5>29</h5>
-                                <p>Sep</p>
-                            </div>
-                            <div class="Descricao">
-                                <h5>Passear com Bel</h5>
-                                <p>Bel</p>
-                            </div>
-                            <p>11:00 - 11:30</p>
-                        </div>
-                        <div class="nomeTarefa">
-                            <div class="data">
-                                <h5>29</h5>
-                                <p>Sep</p>
-                            </div>
-                            <div class="Descricao">
-                                <h5>Passear com Bel</h5>
-                                <p>Bel</p>
-                            </div>
-                            <p>11:00 - 11:30</p>
-                        </div>
-                        <div class="nomeTarefa">
-                            <div class="data">
-                                <h5>29</h5>
-                                <p>Sep</p>
-                            </div>
-                            <div class="Descricao">
-                                <h5>Passear com Bel</h5>
-                                <p>Bel</p>
-                            </div>
-                            <p>11:00 - 11:30</p>
-                        </div>
-                        <div class="nomeTarefa">
-                            <div class="data">
-                                <h5>29</h5>
-                                <p>Sep</p>
-                            </div>
-                            <div class="Descricao">
-                                <h5>Passear com Bel</h5>
-                                <p>Bel</p>
-                            </div>
-                            <p>11:00 - 11:30</p>
-                        </div>
+                <div id="vacina" class="outside">
+                    <div class="menu-icons">
+                        <img src="../public/img/vacina.svg" alt="Vacina">
+                        <p>Vacina</p>
+                    </div>
+                    <div class="active" id="activeVacina">
+                        <div class="cor-interna"></div>
+                    </div>
+                </div>
+                <div id="calendario" class="outside">
+                    <div class="menu-icons">
+                        <img src="../public/img/calendario.svg" alt="calendario">
+                        <p>Calendar</p>
+                    </div>
+                    <div class="active" id="activeCalendar">
+                        <div class="cor-interna"></div>
+                    </div>
+                </div>
+                <div id="comida" class="outside">
+                    <div class="menu-icons">
+                        <img src="../public/img/comida.svg" alt="comida">
+                        <p>Comida</p>
+                    </div>
+                    <div class="active"  id="activeComida">
+                        <div class="cor-interna"></div>
+                    </div>
+                </div>
+                <div id="rotina" class="outside">
+                    <div class="menu-icons">
+                        <img src="../public/img/rotina.svg" alt="rotina">
+                        <p>Rotina</p>
+                    </div>
+                    <div class="active"  id="activeRotina">
+                        <div class="cor-interna"></div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </aside>
+        <main>
+            <div id="divLoader">
+                <div class="loader"></div>
+            </div>
+            <header>
+                <h1>Perfil</h1>
+                <div id="lateral-icons">
+                    <div class="icons" id="divNotificacao">
+                        <span id="haveNotification"></span>
+                        <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                    </div>
+                    <div class="icons">
+                        <img src="../public/img/perfil.svg" alt="foto de perfil" id="fotoPerfil">
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div id="perfilDivExterna">
+                    <div id="perfilDiv">
+                        <div id="fotoPerfilDiv">
+                            <img id="foto" src="../public/img/perfil.svg" alt="foto de perfil">
+                            <div id="edit">
+                                <img id="editar" src="../public/img/edit.svg" alt="botão de editar">
+                            </div>
+                        </div>
+                        <h3>Nome</h3>
+                        <button id="novaTarefa">Nova Tarefa</button>
+                        <div id="grafico">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div id="programacao">
+                    <div id="pets">
+                        <div id="tituloPets">
+                            <h1>Pets</h1>
+                            <img src="../public/img/adicionar.svg" alt="adicionar" id="adicionar">
+                        </div>
+                        <div id="petsCard"></div>
+                    </div>
+                    <div id="agenda">
+                        <h1>Agenda</h1>
+                        <div class="demostracaoTarefa">
+                            <div id="agendaHeader">
+                                <h3 id="todos" class="activeTarefa">Todos</h3>
+                                <h3 id="aFazer">A Fazer</h3>
+                                <h3 id="lembretes">Lembretes</h3>
+                            </div>
+                            <div id="underline">
+                                <div id="underlineActive"></div>
+                            </div>
+                            <div id="listaTarefas">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../controller/databaseController.js"></script>
     <script src="../public/js/perfil.js"></script>
 </body>
 </html>
