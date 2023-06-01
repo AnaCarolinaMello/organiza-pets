@@ -6,7 +6,7 @@ setTimeout(()=>{
 }, 1800);
 
 let database = JSON.parse(localStorage.getItem("database"));
-let pets = database.user[0].pets;
+let pets = database.user[0].pets.sort((a, b) => a.nome.localeCompare(b.nome));
 let select = document.getElementById("pets");
 let option;
 pets.forEach((value) => {
