@@ -308,6 +308,11 @@ main{
     margin-left: 4%;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+
 .divFuncionalidade img{
     z-index: -1;
     position: relative;
