@@ -21,6 +21,7 @@ aside {
     float: left;
     position: fixed;
     background-color: #1E8661;
+    max-width: 200px;
     width: 8%;
     height: 100vh;
     margin-right: 100px;
@@ -99,7 +100,7 @@ aside {
     border-left: 3vh solid #000000;
 }
 
-#activeComida{
+#activePet{
     display: flex;
 }
 
@@ -114,6 +115,7 @@ aside {
 
 main {
     width: 100%;
+    min-height: 100vh;
     margin-left: 8%;
 }
 
@@ -209,13 +211,122 @@ section {
     margin-bottom: 2%;
 }
 
+#tituloPets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Roboto';
+    margin-top: 1.5%;
+}
+
+#tituloPets h1{
+    font-size: 4.5vh;
+    margin-bottom: 2%;
+}
+
+#tituloPets img{
+    height: 4.2vh;
+    margin-right: 3%;
+}
+
+#tituloPets img:hover{
+    cursor: pointer;
+}
+
+#meusPets{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardPet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    min-width: 250px;
+    border-radius: 3vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 1%;
+    margin-right: 3%;
+    font-family: 'Roboto';
+}
+
+.cardPet img{
+    height: 15vh;
+    margin-bottom: 6%;
+}
+
+.cardPet h3{
+    margin-bottom: 6%;
+    font-size: 30px;
+}
+
+.cardPet input{
+    border: #ffffffb8 solid 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding: 4% 2% 2% 2%;
+    background-color: #ffffffb8;
+    border-radius: 5px;
+    margin-bottom: 4%;
+}
+
+.cardPet input:focus{
+    border: #33dba3 solid 3px;
+    outline: 0;
+    box-shadow: none;
+}
+
+.inputCardPet{
+    width: 85%;
+}
+
+.pickcolor{
+    width: 91%;
+    height: 5vh;
+}
+
+.pickcolor:hover{
+    cursor: pointer;
+}
+
+.cardPet button{
+    width: 90%;
+    font-size: 18px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    margin-top: 3%;
+    background-color: #1e1e1ee0;
+    color: white;
+    border: #1e1e1ee0 3px solid;
+}
+
+.cardPet button:hover{
+    background-color: #121212e0;
+    cursor: pointer;
+    border: #33dba3 solid 3px;
+}
+
 @media only screen and (min-width: 1955px)  and (min-height: 825px) {
     aside{
         width: 10% !important;
     }
     
+    #divLoader{
+        width: 94%;
+    }
+    
     main{
-        margin-left: 10% !important;
+        width: 94%;
+        margin-left: 196px !important;
     }
 
     .menu-icons{
@@ -247,7 +358,7 @@ section {
 
 @media only screen and (min-height: 825px)  and (max-width: 1486px) and (min-height: 825px) {
     aside{
-        width: 15% !important;
+        width: 12% !important;
     }
 
     .menu-icons {
@@ -259,7 +370,7 @@ section {
     }
 
     main{
-        margin-left: 15% !important;
+        margin-left: 12% !important;
     }
 }
 
@@ -289,7 +400,7 @@ section {
     }
 }
 
-@media only screen and (min-height: 825px) and (max-width: 1110px) {
+@media only screen and (min-height: 825px) and (max-width: 1187px) {
     #content {
         flex-direction: column-reverse;
         align-items: top;
@@ -301,8 +412,22 @@ section {
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 10vh;
+    }
+
+    #tituloPets{
+        margin-bottom: 3%;
+    }
+
+    #meusPets{
+        justify-content: center;
+    }
+
+    .cardPet{
+        margin-bottom: 8%;
+        width: 50%;
     }
 
     #icons {
@@ -315,6 +440,7 @@ section {
     }
 
     main {
+        margin-top: 0;
         margin-left: 0 !important;
     }
 
@@ -343,7 +469,7 @@ section {
         display: none;
     }
 
-    #activeComida{
+    #activePet{
         display: none;
     }
 }
@@ -377,8 +503,25 @@ section {
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 10vh !important;
+    }
+
+    main{
+        margin-top: 0;
+    }
+
+    #tituloPets{
+        margin-bottom: 3%;
+    }
+
+    #meusPets{
+        justify-content: center;
+    }
+
+    .cardPet{
+        margin-bottom: 8%;
     }
 }
 
@@ -394,8 +537,21 @@ section {
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 13.5vh;
+    }
+
+    #tituloPets{
+        margin-bottom: 3%;
+    }
+
+    #meusPets{
+        justify-content: center;
+    }
+
+    .cardPet{
+        margin-bottom: 8%;
     }
 
     #icons {
@@ -409,6 +565,8 @@ section {
 
     main {
         margin-left: 0 !important;
+        margin-top: 0;
+        height: max-content;
     }
 
     .outside {
@@ -430,14 +588,8 @@ section {
         display: none;
     }
 
-    #activeComida{
+    #activePet{
         display: none;
-    }
-
-    main {
-        height: 105vh;
-        margin-top: 2%;
-        margin-left: 0;
     }
 }
 
@@ -446,6 +598,12 @@ section {
 @media only screen and (max-width: 556px) {
     aside {
         height: 12vh;
+    }
+    #meusPets{
+        justify-content: center;
+    }
+    .cardPet{
+        height: 64vh;
     }
 }
 
@@ -468,7 +626,7 @@ section {
     }
 
     main {
-        height: 102vh;
+        height: max-content;
     }
 
     .icons {
@@ -491,12 +649,16 @@ section {
 
 @media only screen and (max-width: 350px) {
     main {
-        height: 100vh;
+        height: max-content;
     }
 
     header h1 {
         font-family: 'Roboto';
         font-size: 3.8vh;
+    }
+
+    #tituloPets h1{
+        font-size: 3.5vh;
     }
 
     #lateral-icons {

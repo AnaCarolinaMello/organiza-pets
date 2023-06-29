@@ -1,6 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto');
-
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body,
 html {
@@ -16,15 +14,18 @@ html {
 }
 
 aside {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     float: left;
     position: fixed;
     background-color: #1E8661;
+    max-width: 200px;
     width: 8%;
     height: 100vh;
     margin-right: 100px;
+    color: #000000;
 }
 
 #logo {
@@ -46,7 +47,6 @@ aside {
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-
 }
 
 .menu-icons {
@@ -56,14 +56,13 @@ aside {
     background: #53e3a79b;
     width: 65%;
     padding-top: 4%;
-    padding-bottom: 4%;
+    padding-bottom: 7%;
     padding-left: 1%;
     padding-right: 1%;
     margin-left: 7%;
     border: solid black 1px;
     border-radius: 10%;
     transition: background-color 0.3s ease;
-
 }
 
 .menu-icons:hover {
@@ -112,7 +111,7 @@ aside {
     border-left: 3vh solid #74e8b7;
 }
 
-#activeRotina {
+#rotina .active {
     display: flex;
 }
 
@@ -122,10 +121,11 @@ main {
     height: 100vh;
 }
 
-#divLoader{
-    z-index: -1;
+#divLoader {
+    position: absolute;
+    z-index: 9;
     height: 100vh;
-    width: 100%;
+    width: 92%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,22 +138,47 @@ main {
     border-top: 16px solid #1E8661;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
     animation: spin 2s linear infinite;
 }
 
+.fc-toolbar-chunck{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+margin: 0;
+}
+
+.fc-bottom-group{
+    color: red;
+}
+
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 header {
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -207,7 +232,7 @@ header>div {
 }
 
 section {
-    display: none;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     margin-left: 2%;
@@ -303,7 +328,7 @@ section {
     margin: 0;
     text-decoration: underline;
 }
-
+/* 
 #day0,
 #day1,
 #day2,
@@ -317,6 +342,179 @@ section {
     flex-direction: column;
     align-items: center;
     margin: 10%;
+} */
+
+.confirmacao {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #0000005b;
+    font-family: 'Roboto';
+}
+
+#confirmarDelete {
+    position: relative;
+    width: 40%;
+}
+
+#confirmarEdit {
+    position: relative;
+    width: 40%;
+}
+
+.confirmContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 90vh;
+    background: white;
+    border-radius: 12px;
+    padding: 3%;
+}
+
+.close {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    top: 0;
+    right: 0;
+    margin-right: 2%;
+    font-size: 28px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.confirmContent h2 {
+    margin-bottom: 4%;
+    font-size: 24px;
+}
+
+#divButtons{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3%;
+}
+
+#divDadosEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3%;
+}
+
+#divDadosEdit h3 {
+    margin-bottom: 3%;
+    font-size: 24px;
+}
+
+#divDadosEdit input {
+    width: 80%;
+    font-size: 18px;
+    padding: 1%;
+    border-radius: 5px;
+    border: solid 1.4px;
+    margin-bottom: 2%;
+}
+
+#divDadosEdit textarea {
+    width: 80%;
+    max-height: 50vh;
+    font-size: 18px;
+    padding: 1%;
+    border-radius: 5px;
+    border: solid 1.4px;
+    margin-bottom: 2%;
+}
+
+#textArea {
+    border: 1px solid black;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.botoes button {
+    width: 25%;
+    height: 5vh;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cancelar {
+    background: #9e9e9e;
+}
+
+.cancelar:hover {
+    cursor: pointer;
+    background: #868686;
+}
+
+#deletar {
+    color: white;
+    background: #ff4747;
+}
+
+#deletar:hover {
+    cursor: pointer;
+    background: #b81f1f;
+}
+
+#salvar {
+    color: white;
+    background: #477eff;
+}
+
+#salvar:hover {
+    cursor: pointer;
+    background: #2c5bca;
+}
+
+.popover {
+    margin: 4px;
+    display: flex;
+}
+
+#divAddTarefas {
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.fc-event-title-container:hover {
+    cursor: pointer;
+}
+
+.fc-toolbar-chunk{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.fc-button-group{
+    margin: 0;
 }
 
 @media only screen and (min-width: 1955px) and (min-height: 825px) {
@@ -324,8 +522,13 @@ section {
         width: 10% !important;
     }
 
+    #divLoader {
+        width: 94%;
+    }
+
     main {
-        margin-left: 10% !important;
+        width: 94%;
+        margin-left: 196px !important;
     }
 
     .menu-icons {
@@ -347,11 +550,30 @@ section {
     }
 
     .menu-icons {
-        height: 12vh;
+        height: 14vh;
     }
 
     .menu-icons p {
         font-size: 2vh;
+    }
+}
+
+@media only screen and (min-height: 825px) and (max-width: 1486px) and (min-height: 825px) {
+    aside {
+        width: 12% !important;
+    }
+
+    .menu-icons {
+        width: 70%;
+        height: 13vh;
+    }
+
+    .menu-icons p {
+        font-size: 1.8vh;
+    }
+
+    main {
+        margin-left: 12% !important;
     }
 }
 
@@ -381,7 +603,7 @@ section {
     }
 }
 
-@media only screen and (min-height: 825px) and (max-width: 1110px) {
+@media only screen and (min-height: 825px) and (max-width: 1187px) {
     #content {
         flex-direction: column-reverse;
         align-items: top;
@@ -389,9 +611,9 @@ section {
     }
 
     aside {
-        display: none;
         flex-direction: row;
         position: sticky;
+        max-width: none;
         bottom: 0;
         width: 100% !important;
         height: 10vh;
@@ -410,6 +632,11 @@ section {
         margin-left: 0 !important;
     }
 
+    #divLoader {
+        position: fixed;
+        width: 100%;
+    }
+
     .outside {
         justify-content: space-evenly;
         width: 20%;
@@ -417,7 +644,7 @@ section {
     }
 
     .menu-icons {
-        height: 7vh;
+        height: 8vh;
         width: 70%;
         margin-left: 0;
     }
@@ -435,7 +662,7 @@ section {
         display: none;
     }
 
-    #activeRotina {
+    #rotina .active {
         display: none;
     }
 }
@@ -476,12 +703,17 @@ section {
 
 @media only screen and (min-height: 825px) and (max-width: 760px) {
     aside {
-        display: none;
         flex-direction: row;
         position: sticky;
+        max-width: none;
         bottom: 0;
         width: 100% !important;
         height: 10vh !important;
+    }
+
+    #divLoader {
+        position: fixed;
+        width: 100%;
     }
 }
 
@@ -493,12 +725,17 @@ section {
     }
 
     aside {
-        display: none;
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 13.5vh;
+    }
+
+    #divLoader {
+        position: fixed;
+        width: 100%;
     }
 
     #icons {
@@ -533,7 +770,7 @@ section {
         display: none;
     }
 
-    #activeRotina {
+    #rotina .active {
         display: none;
     }
 
@@ -695,6 +932,8 @@ section {
         padding-bottom: 3%;
     }
 }
+
+
 
 @media only screen and (max-width: 320px) {
     #lateral-icons {

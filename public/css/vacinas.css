@@ -9,18 +9,139 @@ body{
     background-color: #ffffff;
 }
 
+.confirmacao{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #0000005b;
+    font-family: 'Roboto';
+}
+
+#confirmarDelete{
+    position: relative;
+    width: 40%;
+}
+
+#confirmarEdit{
+    position: relative;
+    width: 40%;
+}
+
+.confirmContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 3%;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2%;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.confirmContent h2{
+    margin-bottom: 4%;
+}
+
+#divDadosEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3%;
+}
+
+#divDadosEdit h3{
+    margin-bottom: 3%;
+}
+
+#divDadosEdit input{
+    width: 80%;
+    font-size: 18px;
+    padding: 1%;
+    border-radius: 5px;
+    border: solid 1.4px;
+    margin-bottom: 2%;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.botoes button{
+    width: 25%;
+    height: 5vh;
+    padding: 1%;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cancelar{
+    background: #9e9e9e;
+}
+
+.cancelar:hover{
+    cursor: pointer;
+    background: #868686;
+}
+
+#deletar{
+    color: white;
+    background: #ff4747;
+}
+
+#deletar:hover{
+    cursor: pointer;
+    background: #b81f1f;
+}
+
+#salvar{
+    color: white;
+    background: #477eff;
+}
+
+#salvar:hover{
+    cursor: pointer;
+    background: #2c5bca;
+}
+
 #content{
     display: flex;
     flex-direction: row;
 }
 
 aside {
+    z-index: 9;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     float: left;
     position: fixed;
     background-color: #1E8661;
+    max-width: 200px;
     width: 8%;
     height: 100vh;
     margin-right: 100px;
@@ -115,6 +236,7 @@ aside {
 main {
     width: 100%;
     margin-left: 8%;
+    min-height: 100vh;
 }
 
 #divLoader{
@@ -326,6 +448,30 @@ section {
     width: 20%;
 }
 
+.acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divAcao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divAcao img{
+    height: 4vh;
+}
+
+.divAcao img:hover{
+    cursor: pointer;
+}
+
+.edit{
+    height: 3.5vh !important;
+}
+
 #first {
     margin-right: 4%;
 }
@@ -354,9 +500,14 @@ section {
     aside{
         width: 10% !important;
     }
+
+    #divLoader{
+        width: 94%;
+    }
     
     main{
-        margin-left: 10% !important;
+        width: 94%;
+        margin-left: 196px !important;
     }
 
     .menu-icons{
@@ -388,7 +539,7 @@ section {
 
 @media only screen and (min-height: 825px)  and (max-width: 1486px) and (min-height: 825px) {
     aside{
-        width: 15% !important;
+        width: 12% !important;
     }
 
     .menu-icons {
@@ -400,7 +551,7 @@ section {
     }
 
     main{
-        margin-left: 15% !important;
+        margin-left: 12% !important;
     }
 
     .tituloTabela {
@@ -434,7 +585,7 @@ section {
     }
 }
 
-@media only screen and (min-height: 825px) and (max-width: 1110px) {
+@media only screen and (min-height: 825px) and (max-width: 1187px) {
     #content {
         flex-direction: column-reverse;
         align-items: top;
@@ -445,6 +596,7 @@ section {
         display: none;
         flex-direction: row;
         position: sticky;
+        max-width: none;
         bottom: 0;
         width: 100% !important;
         height: 10vh;
@@ -498,6 +650,18 @@ section {
     }
 }
 
+
+@media only screen and (max-width: 1157px) {
+    #confirmarDelete {
+        position: relative;
+        width: 60%;
+    }
+    #confirmarEdit {
+        position: relative;
+        width: 60%;
+    }
+}
+
 @media only screen and (max-width: 1043px) {
     aside {
         width: 12%;
@@ -508,7 +672,7 @@ section {
     }
 }
 
-@media only screen and (min-height: 825px) and (max-width: 1010px) {
+@media only screen and (min-height: 680px) and (max-width: 1010px) {
     #first {
         display: block;
     }
@@ -538,12 +702,27 @@ section {
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 10vh !important;
     }
 }
 
 @media only screen and (max-width: 760px) {
+    #confirmarDelete {
+        position: relative;
+        width: 80%;
+    }
+    
+    #confirmarEdit {
+        position: relative;
+        width: 80%;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
     #content {
         flex-direction: column-reverse;
         align-items: top;
@@ -555,6 +734,7 @@ section {
         flex-direction: row;
         position: sticky;
         bottom: 0;
+        max-width: none;
         width: 100% !important;
         height: 13.5vh;
     }
@@ -631,6 +811,42 @@ section {
 
     .repetirTabela {
         width: 23%;
+    }
+    
+    .divAcao img{
+        height: 3vh;
+    }
+
+    .edit{
+        height: 2.5vh !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .confirmContent{
+        width: 100%;
+        text-align: center;
+    }
+    #tituloDelete{
+        width: 90%;
+    }
+    #divDadosEdit{
+        width: 80%;
+        margin-top: 5%;
+    }
+    #divDadosEdit input{
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    .close {
+        margin-right: -3%;
+    }
+    .botoes{
+        margin-bottom: 5%;
+    }
+    .botoes button {
+        width: 40%;
     }
 }
 
@@ -757,5 +973,17 @@ section {
 @media only screen and (max-width: 320px) {
     #lateral-icons {
         width: 26%;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .dataTabela {
+        width: 24%;
+    }
+    .nomeTabela {
+        width: 37%;
+    }
+    .doseTabela {
+        width: 16%;
     }
 }

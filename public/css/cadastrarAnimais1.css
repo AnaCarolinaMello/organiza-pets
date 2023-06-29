@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body,
 html {
@@ -97,6 +97,10 @@ main {
 #voltar {
     display: flex;
     padding: 2% 0% 0% 2%;
+}
+
+#voltar h3:hover{
+    cursor: pointer;
 }
 
 #lineOfProgress {

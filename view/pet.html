@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas</title>
-    <link rel="stylesheet" href="../public/css/comida.css">
+    <title>Animais</title>
+    <link rel="stylesheet" href="../public/css/pet.css">
+    <link rel="stylesheet" href="../public/css/popup.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="../public/img/logo.svg">
 </head>
 <body>
+    <div id="popupPerfil">
+        <div class="activePerfil">
+        </div>
+        <div id="conteudoPerfil">
+            <h2 id="perfilPopup">Perfil</h2>
+            <h2 id="logout">Logout</h2>
+        </div>
+    </div>
+    <div id="alert">
+        <h2></h2>
+    </div>
+    <div id="alertNoti">
+        <h2></h2>
+    </div>
     <div id="content">
         <aside>
             <div id="logo">
@@ -42,12 +59,12 @@
                         <div class="cor-interna"></div>
                     </div>
                 </div>
-                <div id="comida" class="outside">
+                <div id="pet" class="outside">
                     <div class="menu-icons">
-                        <img src="../public/img/comida.svg" alt="comida">
-                        <p>Comida</p>
+                        <img src="../public/img/paw.svg" alt="pet">
+                        <p>Animais</p>
                     </div>
-                    <div class="active"  id="activeComida">
+                    <div class="active"  id="activePet">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -67,23 +84,51 @@
                 <div class="loader"></div>
             </div>
             <header>
-                <h1>Comida</h1>
+                <h1>Animais</h1>
                 <div id="lateral-icons">
-                    <div class="icons" id="divNotificacao">
-                        <span id="haveNotification"></span>
-                        <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                    <div class="icons" id="divNoti">
+                        <div id="divNotificacao">
+                            <span id="haveNotification"></span>
+                            <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                        </div>
+                        <div id="popup">
+                            <div class="activeNoti">
+                            </div>
+                            <div id="conteudo">
+                                <div id="titulo">
+                                    <h2 id="hojeNotificacao" class="activeNotificacao">Hoje</h2>
+                                    <h2 id="todas">Todas</h2>
+                                </div>
+                                <div id="underlineNoti">
+                                    <div id="underlineActiveNoti"></div>
+                                </div>
+                                <div id="hoje" class="cardNoti">
+                                </div>
+                                <div id="todos" class="cardNoti">
+                        
+                                </div>
+                                <div id="semNotificacoes">
+                                    <h2>Sem notificações</h2>
+                                    <img src="../public/img/notFound.svg" alt="não encontrado">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="icons">
                         <img src="../public/img/perfil.svg" alt="foto de perfil" id="fotoPerfil">
                     </div>
                 </div>
             </header>
-            <section id="vacinas">
-        
+            <section id="">
+                <div id="tituloPets">
+                    <h1>Pets</h1>
+                    <img src="../public/img/adicionar.svg" alt="adicionar" id="adicionar">
+                </div>
+                <div id="meusPets"></div>
             </section>
         </main>
     </div>
-    <script src="../controller/databaseController.js"></script>
-    <script src="../public/js/comida.js"></script>
+    <script src="../public/js/pet.js"></script>
+    <script src="../public/js/timeInApp.js"></script>
 </body>
 </html>

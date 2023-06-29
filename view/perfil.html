@@ -6,21 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="../public/css/perfil.css">
+    <link rel="stylesheet" href="../public/css/popup.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="../public/img/logo.svg">
 </head>
 <body>
-    <div id="confirmacao">
+    <div class="confirmacao" id="deleteCon">
         <div id="confirmarDelete">
-            <h1 id="close">x</h1>
-            <div id="confirmContent">
+            <h1 class="close" id="closeDelete">x</h1>
+            <div class="confirmContent">
                 <div id="tituloDelete">
                     <h2>Tem certeza que deseja deletar?</h2>
                 </div>
-                <div id="botoes">
-                    <button id="cancelar">Cancelar</button>
+                <div class="botoes">
+                    <button class="cancelar" id="cancelarDelete">Cancelar</button>
                     <button id="deletar">Deletar</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="confirmacao" id="editCon">
+        <div id="confirmarEdit">
+            <h1 class="close" id="closeEdit">x</h1>
+            <div class="confirmContent">
+                <div id="divDadosEdit">
+                    <h3>Edite seus dados</h3>
+                    <input id="nomeUserEdit">
+                    <input id="emailEdit">
+                    <input id="senhaEdit">
+                    <input id="conSenhaEdit">
+                </div>
+                <div class="botoes">
+                    <button class="cancelar" id="cancelarEdit">Cancelar</button>
+                    <button id="salvar">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="alert">
+        <h2></h2>
+    </div>
+    <div id="alertNoti">
+        <h2></h2>
+    </div>
+    <div id="popupPerfil">
+        <div class="activePerfil">
+        </div>
+        <div id="conteudoPerfil">
+            <h2 id="perfilPopup">Perfil</h2>
+            <h2 id="logout">Logout</h2>
         </div>
     </div>
     <div id="content">
@@ -56,12 +91,12 @@
                         <div class="cor-interna"></div>
                     </div>
                 </div>
-                <div id="comida" class="outside">
+                <div id="pet" class="outside">
                     <div class="menu-icons">
-                        <img src="../public/img/comida.svg" alt="comida">
-                        <p>Comida</p>
+                        <img src="../public/img/paw.svg" alt="pet">
+                        <p>Animais</p>
                     </div>
-                    <div class="active"  id="activeComida">
+                    <div class="active"  id="activePet">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -83,9 +118,33 @@
             <header>
                 <h1>Perfil</h1>
                 <div id="lateral-icons">
-                    <div class="icons" id="divNotificacao">
-                        <span id="haveNotification"></span>
-                        <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                    <div class="icons" id="divNoti">
+                        <div id="divNotificacao">
+                            <span id="haveNotification"></span>
+                            <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                        </div>
+                        <div id="popup">
+                            <div class="activeNoti">
+                            </div>
+                            <div id="conteudo">
+                                <div id="titulo">
+                                    <h2 id="hojeNotificacao" class="activeNotificacao">Hoje</h2>
+                                    <h2 id="todas">Todas</h2>
+                                </div>
+                                <div id="underlineNoti">
+                                    <div id="underlineActiveNoti"></div>
+                                </div>
+                                <div id="hoje" class="cardNoti">
+                                </div>
+                                <div id="todosNoti" class="cardNoti">
+                        
+                                </div>
+                                <div id="semNotificacoes">
+                                    <h2>Sem notificações</h2>
+                                    <img src="../public/img/notFound.svg" alt="não encontrado">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="icons">
                         <img src="../public/img/perfil.svg" alt="foto de perfil" id="fotoPerfil">
@@ -127,7 +186,15 @@
                             <div id="underline">
                                 <div id="underlineActive"></div>
                             </div>
-                            <div id="listaTarefas">
+                            <div class="listaTarefas" id="todasTarefas">
+                            </div>
+                            <div class="listaTarefas" id="aFazerTarefas">
+                            </div>
+                            <div class="listaTarefas" id="lembretesTarefas">
+                            </div>
+                            <div id="semTarefas">
+                                <h2>Sem tarefas</h2>
+                                <img src="../public/img/notFound.svg" alt="sem tarefas">
                             </div>
                         </div>
                     </div>
@@ -136,7 +203,7 @@
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../controller/databaseController.js"></script>
     <script src="../public/js/perfil.js"></script>
+    <script src="../public/js/timeInApp.js"></script>
 </body>
 </html>

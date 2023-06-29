@@ -5,10 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/vacinas.css">
+    <link rel="stylesheet" href="../public/css/popup.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Vacinas</title>
     <link rel="icon" href="../public/img/logo.svg">
 </head>
 <body>
+    <div class="confirmacao" id="deleteCon">
+        <div id="confirmarDelete">
+            <h1 class="close" id="closeDelete">x</h1>
+            <div class="confirmContent">
+                <div id="tituloDelete">
+                    <h2>Tem certeza que deseja deletar?</h2>
+                </div>
+                <div class="botoes">
+                    <button class="cancelar" id="cancelarDelete">Cancelar</button>
+                    <button id="deletar">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="alert">
+        <h2></h2>
+    </div>
+    <div id="alertNoti">
+        <h2></h2>
+    </div>
+    <div class="confirmacao" id="editCon">
+        <div id="confirmarEdit">
+            <h1 class="close" id="closeEdit">x</h1>
+            <div class="confirmContent">
+                <div id="divDadosEdit">
+                    <h3>Edite os dados vacinais do seu pet</h3>
+                    <input id="nomeEdit">
+                    <input id="dataEdit" type="date">
+                    <input id="doseEdit">
+                    <input id="repetirEdit" type="date">
+                </div>
+                <div class="botoes">
+                    <button class="cancelar" id="cancelarEdit">Cancelar</button>
+                    <button id="salvar">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupPerfil">
+        <div class="activePerfil">
+        </div>
+        <div id="conteudoPerfil">
+            <h2 id="perfilPopup">Perfil</h2>
+            <h2 id="logout">Logout</h2>
+        </div>
+    </div>
     <div id="content">
         <aside>
             <div id="logo">
@@ -42,12 +91,12 @@
                         <div class="cor-interna"></div>
                     </div>
                 </div>
-                <div id="comida" class="outside">
+                <div id="pet" class="outside">
                     <div class="menu-icons">
-                        <img src="../public/img/comida.svg" alt="comida">
-                        <p>Comida</p>
+                        <img src="../public/img/paw.svg" alt="pet">
+                        <p>Animais</p>
                     </div>
-                    <div class="active"  id="activeComida">
+                    <div class="active"  id="activePet">
                         <div class="cor-interna"></div>
                     </div>
                 </div>
@@ -69,9 +118,33 @@
             <header>
                 <h1>Vacinas</h1>
                 <div id="lateral-icons">
-                    <div class="icons" id="divNotificacao">
-                        <span id="haveNotification"></span>
-                        <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                    <div class="icons" id="divNoti">
+                        <div id="divNotificacao">
+                            <span id="haveNotification"></span>
+                            <img src="../public/img/notificacao.svg" alt="notificações" id="notificacao">
+                        </div>
+                        <div id="popup">
+                            <div class="activeNoti">
+                            </div>
+                            <div id="conteudo">
+                                <div id="titulo">
+                                    <h2 id="hojeNotificacao" class="activeNotificacao">Hoje</h2>
+                                    <h2 id="todas">Todas</h2>
+                                </div>
+                                <div id="underlineNoti">
+                                    <div id="underlineActiveNoti"></div>
+                                </div>
+                                <div id="hoje" class="cardNoti">
+                                </div>
+                                <div id="todos" class="cardNoti">
+                        
+                                </div>
+                                <div id="semNotificacoes">
+                                    <h2>Sem notificações</h2>
+                                    <img src="../public/img/notFound.svg" alt="não encontrado">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="icons">
                         <img src="../public/img/perfil.svg" alt="foto de perfil" id="fotoPerfil">
@@ -83,7 +156,7 @@
             </section>
         </main>
     </div>
-    <script src="../controller/databaseController.js"></script>
     <script src="../public/js/vacinas.js"></script>
+    <script src="../public/js/timeInApp.js"></script>
 </body>
 </html>
