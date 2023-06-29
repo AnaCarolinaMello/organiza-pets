@@ -104,7 +104,8 @@ function getNotificacoes(db) {
     }
     data = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`;
     let today = new Date();
-    let twoWeeks = new Date(today.getTime() + (14 * 24 * 60 * 60 * 1000));
+    let oneWeek = new Date();
+    oneWeek.setDate(today.getDate() + 7)
     today = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
     if (data == today) {
         $("#hoje").append(`
@@ -119,7 +120,7 @@ function getNotificacoes(db) {
             </div>
             `);
     }
-    if (data > today && data < twoWeeks) {
+    if (data > today && data < oneWeek) {
       $("#todos").append(`
           <div class='notifications'>
               <img src="${element.path}" alt="${element.nomePet}">
