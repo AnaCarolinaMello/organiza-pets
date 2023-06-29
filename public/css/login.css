@@ -108,6 +108,7 @@ main {
     font-size: 38px;
     color: #ffff;
     text-align: center;
+    font-weight: bold;
 }
 
 #line {
@@ -120,6 +121,8 @@ main {
     color: #ffff;
     text-align: center;
     padding: 2%;
+    font-size: 20px;
+    margin-top: 2%;
 }
 
 #progressBar {
@@ -167,6 +170,7 @@ main {
     color: #33dba3;
     text-align: center;
     margin-top: 15%;
+    font-weight: bold;
 }
 
 #lineGreen {
@@ -234,7 +238,7 @@ label {
     font-size: 20px;
     font-weight: 550;
     padding: 14px 10px 14px 10px;
-    /* margin-top: 7%; */
+    font-weight: bold;
     border: none;
     border-radius: 10px;
 }
