@@ -4,7 +4,7 @@ const userIdTime = localStorage.getItem("userId");
 const userIndexTime = databaseTime.usersHours.findIndex((x) => x.id == parseInt(userIdTime));
 if(!databaseTime && userIdTime){
     let horas = {
-        id: userId,
+        id: userIdTime,
         hours: [0, 0, 0, 0, 0, 0, 0],
     }
     localStorage.setItem("hours", JSON.stringify({
