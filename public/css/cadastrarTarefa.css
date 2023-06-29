@@ -308,14 +308,24 @@ label {
     width: 70%;
 }
 #cadastrar-button{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #33dba3;
-    border: none;
-    border-radius: 4px;
-    height: 7vh;
-    width: 26%;
-    font-size: large;
-    font-weight: bolder;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    padding: 14px 10px 14px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#cadastrar-button:hover{
+    cursor: pointer;
+    background-color: #11c589;
 }
 .date-inputs{
     display: flex;

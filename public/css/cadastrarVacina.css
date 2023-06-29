@@ -224,8 +224,8 @@ label{
     font-size: 20px;
     font-weight: 550;
     padding: 14px 10px 14px 10px;
-    /* margin-top: 7%; */
     border: none;
+    font-weight: bold;
     border-radius: 10px;
 }
 
