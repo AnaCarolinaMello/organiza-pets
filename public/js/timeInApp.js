@@ -14,8 +14,6 @@ if(!databaseTime && userIdTime){
     dataHora.usersHours.push(horas)
     localStorage.setItem('hours', JSON.stringify(dataHora))
     usersHours = JSON.parse(localStorage.getItem('hours'))
-}else if(!userIdTime){
-    location.assign('../index.html')
 }
 
 if (userIndexTime != -1 && userIdTime != null) {
