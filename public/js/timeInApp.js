@@ -1,6 +1,8 @@
 
 let databaseTime = JSON.parse(localStorage.getItem("hours"));
-if(!databaseTime){
+const userIdTime = localStorage.getItem("userId");
+const userIndexTime = databaseTime.usersHours.findIndex((x) => x.id == parseInt(userIdTime));
+if(!databaseTime && userIdTime){
     let horas = {
         id: userId,
         hours: [0, 0, 0, 0, 0, 0, 0],
@@ -12,9 +14,10 @@ if(!databaseTime){
     dataHora.usersHours.push(horas)
     localStorage.setItem('hours', JSON.stringify(dataHora))
     usersHours = JSON.parse(localStorage.getItem('hours'))
+}else if(!userIdTime){
+    location.assign('../index.html')
 }
-const userIdTime = localStorage.getItem("userId");
-const userIndexTime = databaseTime.usersHours.findIndex((x) => x.id == parseInt(userIdTime));
+
 if (userIndexTime != -1 && userIdTime != null) {
     marckStratHour()
 }
