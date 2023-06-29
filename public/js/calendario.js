@@ -413,7 +413,7 @@ function popEditDelete(info) {
           <input id="nomeEdit" value="${info.event.title}">
           <input id="dataEdit" type="datetime-local" value="${formattedDate}">
           <input id="fimEdit" type="datetime-local" value="${formattedDateFim}">
-          <textarea id="textArea" value="${info.event.extendedProps.description}"></textarea>
+          <textarea id="textArea" value="${info.event.extendedProps.description != '-'? info.event.extendedProps.description: ''}"></textarea>
         </div>
         <div class="botoes">
           <button class="cancelar text-white" id="cancelarEdit">Cancelar</button>
@@ -422,7 +422,7 @@ function popEditDelete(info) {
       </div>
     </div>`;
     let textEdit = document.querySelector("#textArea");
-    textEdit.value = info.event.extendedProps.description;
+    textEdit.value = info.event.extendedProps.description != '-'? info.event.extendedProps.description: '';
 
     const salvarEdit = document.querySelector("#salvar");
     salvarEdit.addEventListener("click", () => {
