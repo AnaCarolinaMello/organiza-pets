@@ -98,11 +98,13 @@ function getNotificacoes(db) {
         .toString()
         .padStart(2, "0")}`;
     }
-    data = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`;
+    let dataCompare = data
+    data = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;
     let today = new Date();
+    let todayCompare = today
     let oneWeek = new Date();
-    oneWeek.setDate(today.getDate() + 7)
-    today = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+    oneWeek.setDate(today.getDate() + 4)
+    today = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
     if (data == today) {
         $("#hoje").append(`
             <div class='notifications'>
@@ -116,31 +118,31 @@ function getNotificacoes(db) {
             </div>
             `);
     }
-    if (data > today && data < oneWeek) {
+    if (dataCompare.getTime() > todayCompare.getTime() && dataCompare.getTime() < oneWeek.getTime()) {
+      let month = new Date(element.inicio).getMonth() + 1
       $("#todos").append(`
-          <div class='notifications'>
-              <img src="${element.path}" alt="${element.nomePet}">
-              <div class="tarefaNome">
-              <p>${element.nome}</p>
-          </div>
-          <div class="status">
-              <p class="diaTarefas">${new Date(element.inicio)
-                .getDate()
+        <div class='notifications'>
+            <img src="${element.path}" alt="${element.nomePet}">
+            <div class="tarefaNome">
+            <p>${element.nome}</p>
+        </div>
+        <div class="status">
+            <p class="diaTarefas">${new Date(element.inicio)
+              .getDate()
+              .toString()
+              .padStart(2, "0")} /${month
                 .toString()
-                .padStart(2, "0")} /${new Date(element.inicio)
-        .getMonth()
-        .toString()
-        .padStart(2, "0")} /${new Date(element.inicio).getFullYear()}</p>
-              <p class="horaTarefas">${new Date(element.inicio)
-                .getHours()
-                .toString()
-                .padStart(2, "0")}:${new Date(element.inicio)
-        .getMinutes()
-        .toString()
-        .padStart(2, "0")} ${dataFim}</p>
-          </div>
-          </div>
-          `);
+                .padStart(2, "0")} /${new Date(element.inicio).getFullYear()}</p>
+            <p class="horaTarefas">${new Date(element.inicio)
+              .getHours()
+              .toString()
+              .padStart(2, "0")}:${new Date(element.inicio)
+              .getMinutes()
+              .toString()
+              .padStart(2, "0")} ${dataFim}</p>
+            </div>
+        </div>
+        `);
     }
   });
   const hojeDiv = document.querySelector("#hoje");

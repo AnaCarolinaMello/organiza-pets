@@ -155,25 +155,28 @@ function getNotificacoes(db) {
         .toString()
         .padStart(2, "0")}`;
     }
-    data = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`;
+    let dataCompare = data
+    data = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;
     let today = new Date();
+    let todayCompare = today
     let oneWeek = new Date();
-      oneWeek.setDate(today.getDate() + 7)
-      today = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
-      if (data == today) {
-          $("#hoje").append(`
-              <div class='notifications'>
-                  <img src="${element.path}" alt="${element.nomePet}">
-                  <div class="tarefaNome">
-                  <p>${element.nome}</p>
-                  </div>
-                  <div class="status">
-                  <p>Hoje</p>
-                  </div>
-              </div>
-              `);
-      }
-      if (data > today && data < oneWeek) {
+    oneWeek.setDate(today.getDate() + 4)
+    today = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+    if (data == today) {
+        $("#hoje").append(`
+            <div class='notifications'>
+                <img src="${element.path}" alt="${element.nomePet}">
+                <div class="tarefaNome">
+                <p>${element.nome}</p>
+                </div>
+                <div class="status">
+                <p>Hoje</p>
+                </div>
+            </div>
+            `);
+    }
+    if (dataCompare.getTime() > todayCompare.getTime() && dataCompare.getTime() < oneWeek.getTime()) {
+      let month = new Date(element.inicio).getMonth() + 1
       $("#todos").append(`
             <div class='notifications'>
                 <img src="${element.path}" alt="${element.nomePet}">
@@ -184,10 +187,9 @@ function getNotificacoes(db) {
                 <p class="diaTarefas">${new Date(element.inicio)
                   .getDate()
                   .toString()
-                  .padStart(2, "0")} /${new Date(element.inicio)
-        .getMonth()
-        .toString()
-        .padStart(2, "0")} /${new Date(element.inicio).getFullYear()}</p>
+                  .padStart(2, "0")} /${month
+                    .toString()
+                    .padStart(2, "0")} /${new Date(element.inicio).getFullYear()}</p>
                 <p class="horaTarefas">${new Date(element.inicio)
                   .getHours()
                   .toString()
