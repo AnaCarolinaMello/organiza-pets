@@ -407,6 +407,7 @@ section{
     border: transparent;
     border-radius: 8px;
     background: #607567;
+    color: #000000;
 }
 
 #novaTarefa:hover{

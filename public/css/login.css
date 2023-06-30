@@ -210,6 +210,28 @@ main {
     box-shadow: none;
 }
 
+#nome {
+    width: 100%;
+    border: #686868 solid 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: white;
+    padding: 4% 2% 2% 2%;
+    background-color: #686868;
+    border-radius: 3px;
+    margin-bottom: 3%;
+}
+
+#nome:hover {
+    outline: 0;
+}
+
+#nome:focus {
+    border: #33dba3 solid 3px;
+    outline: 0;
+    box-shadow: none;
+}
+
 label {
     color: #ababab;
     font-family: 'Roboto', sans-serif;
@@ -245,6 +267,7 @@ label {
 
 .btn:hover {
     cursor: pointer;
+    color: white;
     background-color: #11c589;
 }
 

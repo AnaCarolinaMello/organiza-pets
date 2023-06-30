@@ -227,7 +227,6 @@ label {
     height: 62px;
     width: 100%;
     margin-top: 6%;
-    /* margin-bottom: 4%; */
     border: 2px white;
     display: flex;
     justify-content: center;
@@ -252,6 +251,7 @@ label {
 
 .btn:hover {
     cursor: pointer;
+    color: white;
     background-color: #11c589;
 }
 
