@@ -328,21 +328,6 @@ section {
     margin: 0;
     text-decoration: underline;
 }
-/* 
-#day0,
-#day1,
-#day2,
-#day3,
-#day4,
-#day5,
-#day6 {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10%;
-} */
 
 .confirmacao {
     z-index: 10;
@@ -362,12 +347,12 @@ section {
 
 #confirmarDelete {
     position: relative;
-    width: 40%;
+    width: 60%;
 }
 
 #confirmarEdit {
     position: relative;
-    width: 40%;
+    width: 60%;
 }
 
 .confirmContent {
@@ -433,6 +418,8 @@ section {
     border-radius: 5px;
     border: solid 1.4px;
     margin-bottom: 2%;
+    border: #000000 solid 1px;
+    background-color: white;
 }
 
 #divDadosEdit textarea {
@@ -718,6 +705,19 @@ section {
 }
 
 @media only screen and (max-width: 760px) {
+    #confirmarDelete {
+        position: relative;
+        width: 80%;
+    }
+    
+    #confirmarEdit {
+        position: relative;
+        width: 80%;
+    }
+
+    .botoes {
+        width: 90%;
+    }
     #content {
         flex-direction: column-reverse;
         align-items: top;
@@ -795,21 +795,39 @@ section {
     aside {
         height: 12vh;
     }
-
-    .tabela p {
-        word-break: break-word;
+    
+    .edit{
+        height: 2.5vh !important;
     }
+}
 
-    .tabela h3 {
-        font-size: 2.5vh;
+@media only screen and (max-width: 500px) {
+    .confirmContent{
+        width: 100%;
+        text-align: center;
     }
-
-    .doseTabela {
-        width: 17%;
+    #tituloDelete{
+        width: 90%;
     }
-
-    .repetirTabela {
-        width: 23%;
+    #divDadosEdit{
+        width: 80%;
+        margin-top: 5%;
+    }
+    #divDadosEdit input{
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    #divDadosEdit textArea{
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    .botoes{
+        margin-bottom: 5%;
+    }
+    .botoes button {
+        width: 40%;
     }
 }
 

@@ -93,12 +93,12 @@ main {
 
 #confirmarDelete {
     position: relative;
-    width: 40%;
+    width: 60%;
 }
 
 #confirmarEdit {
     position: relative;
-    width: 40%;
+    width: 60%;
 }
 
 .confirmContent {
@@ -164,8 +164,9 @@ main {
     border-radius: 5px;
     border: solid 1.4px;
     margin-bottom: 2%;
+    border: #000000 solid 1px;
+    background-color: white;
 }
-
 
 #divDadosEdit textarea {
     width: 80%;
@@ -236,4 +237,56 @@ main {
 
 .fc-event:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) {
+    #confirmarDelete {
+        position: relative;
+        width: 80%;
+    }
+    
+    #confirmarEdit {
+        position: relative;
+        width: 80%;
+    }
+
+    .botoes {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 556px) {
+    .edit{
+        height: 2.5vh !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .confirmContent{
+        width: 100%;
+        text-align: center;
+    }
+    #tituloDelete{
+        width: 90%;
+    }
+    #divDadosEdit{
+        width: 80%;
+        margin-top: 5%;
+    }
+    #divDadosEdit input{
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    #divDadosEdit textArea{
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    .botoes{
+        margin-bottom: 5%;
+    }
+    .botoes button {
+        width: 40%;
+    }
 }
