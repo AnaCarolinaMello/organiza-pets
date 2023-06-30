@@ -355,10 +355,9 @@ label {
         width: 100%;
     }
     #inputs{
-        gap: 5px;
-        padding: 20px;
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 90%;
     }
     #tarefa-direita{
         display: none;
