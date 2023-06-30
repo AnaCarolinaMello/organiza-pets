@@ -371,6 +371,21 @@ label {
         padding-right: 40px;
         width: 90%;
     }
+    #button-container{
+        margin-bottom: 5%;
+    }
+    .text {
+        padding: 0px;
+        padding-bottom: 0px;
+        padding-top: 20px;
+    }    
+    #text-p1{
+        padding-top: 5%;
+    }
+    #resto-esquerda{
+        margin-top: 4%;
+        height: 120vh;
+    }
 }
 
 @media only screen and (max-width: 540px) {
