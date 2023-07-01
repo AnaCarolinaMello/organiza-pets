@@ -166,6 +166,15 @@ main {
     margin-bottom: 2%;
     border: #000000 solid 1px;
     background-color: white;
+    color: #000000;
+}
+
+#dataEdit{
+    width: 80%;
+}
+
+#fimEdit{
+    width: 80%;
 }
 
 #divDadosEdit textarea {
@@ -277,6 +286,12 @@ main {
         width: 100%;
         margin-top: 4%;
         margin-bottom: 4%;
+    }
+    #dataEdit{
+        width: 100%;
+    }
+    #fimEdit{
+        width: 100%;
     }
     #divDadosEdit textArea{
         width: 100%;
