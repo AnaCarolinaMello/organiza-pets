@@ -44,21 +44,21 @@ $(btnEntrar).click(() => {
       users &&
       users.senha == senha
     ) {
-      window.location.assign(`../view/perfil.html`);
       localStorage.setItem("userId", users.id);
-      let horas = {
-        id: users.id,
-        hours: [0, 0, 0, 0, 0, 0, 0],
-      }
       if(!localStorage.getItem("hours")){
         localStorage.setItem("hours", JSON.stringify({
           usersHours: []
         }))
+        let horas = {
+          id: users.id,
+          hours: [0, 0, 0, 0, 0, 0, 0],
+        }
+        let dataHora = JSON.parse(localStorage.getItem("hours"))
+        dataHora.usersHours.push(horas)
+        localStorage.removeItem('hours')
+        localStorage.setItem('hours', JSON.stringify(dataHora))
       }
-      let dataHora = JSON.parse(localStorage.getItem("hours"))
-      dataHora.usersHours.push(horas)
-      localStorage.removeItem('hours')
-      localStorage.setItem('hours', JSON.stringify(dataHora))
+      window.location.assign(`../view/perfil.html`);
     } else {
       alert.style.backgroundColor = '#ff4747'
       texto.textContent = "Usuario ou senha inválidos"
